@@ -1,0 +1,105 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE mapper PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN" "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="com.zj.videoservice.mapper.OutdoorVideoCommentMapper">
+    <!--某视频一级评论按照发布时间降序-->
+    <select id="listCommentsOrderByTime" parameterType="CommentFlagVO" resultType="CommentVO">
+        SELECT
+            t3.id,
+            t3.uid,
+            t3.content,
+            t3.praiseNum,
+            t4.nickname,
+            t4.avatar,
+            t3.fan_id,
+            t3.gmt_create
+        FROM
+            (
+            SELECT
+                t1.id,
+                t1.content,
+                t1.uid,
+                t1.video_id,
+                COUNT( t2.source_id ) AS praiseNum,
+                t2.fan_id,
+                t1.gmt_create
+            FROM
+                outdoor_video_comment AS t1
+                LEFT JOIN (
+                SELECT
+                    op.fan_id,
+                    op.source_id
+                FROM
+                    outdoor_praise op
+                WHERE
+                    op.source = 1
+                    AND op.is_deleted = 0
+                    AND op.fan_id = #{fanId}
+                GROUP BY
+                    op.id
+                ) AS t2 ON t1.`id` = t2.`source_id`
+            WHERE
+                t1.video_id = #{videoId}
+                AND t1.is_deleted = 0
+                AND t1.pid = 0
+            GROUP BY
+                t1.id
+            ) AS t3
+            LEFT JOIN outdoor_user AS t4 ON t4.id = t3.uid
+        GROUP BY
+            t3.id
+        ORDER BY
+            t3.gmt_create DESC,
+            t3.praiseNum DESC
+    </select>
+
+    <!--某视频一级评论首先按获赞数降序排序，其次按评论时间降序排序，并查出每条评论是否被登录的用户点赞过-->
+    <select id="listCommentsOrderByPraise" parameterType="CommentFlagVO" resultType="CommentVo">
+        SELECT
+            t3.id,
+            t3.uid,
+            t3.content,
+            t3.praiseNum,
+            t4.nickname,
+            t4.avatar,
+            t3.fan_id,
+            t3.gmt_create
+        FROM
+            (
+            SELECT
+                t1.id,
+                t1.content,
+                t1.uid,
+                t1.video_id,
+                COUNT( t2.source_id ) AS praiseNum,
+                t2.fan_id,
+                t1.gmt_create
+            FROM
+                outdoor_video_comment AS t1
+                LEFT JOIN (
+                SELECT
+                    op.fan_id,
+                    op.source_id
+                FROM
+                    outdoor_praise op
+                WHERE
+                    op.source = 1
+                    AND op.is_deleted = 0
+                    AND op.fan_id = #{fanId}
+                GROUP BY
+                    op.id
+                ) AS t2 ON t1.`id` = t2.`source_id`
+            WHERE
+                t1.video_id = #{videoId}
+                AND t1.is_deleted = 0
+                AND t1.pid = 0
+            GROUP BY
+                t1.id
+            ) AS t3
+            LEFT JOIN outdoor_user AS t4 ON t4.id = t3.uid
+        GROUP BY
+            t3.id
+        ORDER BY
+            t3.praiseNum DESC,
+            t3.gmt_create DESC
+    </select>
+</mapper>

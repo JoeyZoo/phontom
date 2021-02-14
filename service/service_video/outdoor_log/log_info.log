@@ -1,0 +1,29 @@
+2020-12-07 10:28:27.766 [main] INFO  c.z.v.service.impl.OutdoorVideoServiceImplTest - Starting OutdoorVideoServiceImplTest on LAPTOP-LHVCOE0Q with PID 8604 (started by 13121 in E:\outdoor\service\service_video)
+2020-12-07 10:28:27.768 [main] INFO  c.z.v.service.impl.OutdoorVideoServiceImplTest - The following profiles are active: dev
+2020-12-07 10:28:29.056 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2020-12-07 10:28:29.214 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2020-12-07 10:28:30.430 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2020-12-07 10:28:31.001 [main] INFO  c.z.v.service.impl.OutdoorVideoServiceImplTest - Started OutdoorVideoServiceImplTest in 3.833 seconds (JVM running for 4.8)
+2020-12-07 10:28:31.720 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2020-12-07 10:28:31.723 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2020-12-07 10:28:31.737 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.
+2021-01-16 11:04:19.307 [main] INFO  com.zj.videoservice.mapper.OutdoorVideoMapperTest - The following profiles are active: dev
+2021-01-16 11:04:20.252 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Multiple Spring Data modules found, entering strict repository configuration mode!
+2021-01-16 11:04:20.257 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Bootstrapping Spring Data repositories in DEFAULT mode.
+2021-01-16 11:04:20.311 [main] INFO  o.s.d.r.config.RepositoryConfigurationDelegate - Finished Spring Data repository scanning in 26ms. Found 0 repository interfaces.
+2021-01-16 11:04:20.645 [main] INFO  o.springframework.cloud.context.scope.GenericScope - BeanFactory id=5a832b1c-97d4-34ef-8256-1eaefed546c0
+2021-01-16 11:04:20.970 [main] INFO  o.s.c.s.PostProcessorRegistrationDelegate$BeanPostProcessorChecker - Bean 'org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration' of type [org.springframework.transaction.annotation.ProxyTransactionManagementConfiguration] is not eligible for getting processed by all BeanPostProcessors (for example: not eligible for auto-proxying)
+2021-01-16 11:04:21.458 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Starting...
+2021-01-16 11:04:21.750 [main] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Start completed.
+2021-01-16 11:04:23.881 [main] INFO  s.d.s.w.PropertySourcedRequestMappingHandlerMapping - Mapped URL path [/v2/api-docs] onto method [springfox.documentation.swagger2.web.Swagger2Controller#getDocumentation(String, HttpServletRequest)]
+2021-01-16 11:04:24.171 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-01-16 11:04:24.185 [main] INFO  com.netflix.config.sources.URLConfigurationSource - To enable URLs as dynamic configuration sources, define System property archaius.configurationSource.additionalUrls or make config.properties available on classpath.
+2021-01-16 11:04:24.686 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Initializing ExecutorService 'applicationTaskExecutor'
+2021-01-16 11:04:26.657 [main] INFO  o.s.scheduling.concurrent.ThreadPoolTaskScheduler - Initializing ExecutorService
+2021-01-16 11:04:27.209 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Context refreshed
+2021-01-16 11:04:27.257 [main] INFO  s.d.s.web.plugins.DocumentationPluginsBootstrapper - Found 1 custom documentation plugin(s)
+2021-01-16 11:04:27.344 [main] INFO  s.d.spring.web.scanners.ApiListingReferenceScanner - Scanning for api listing references
+2021-01-16 11:04:27.955 [main] INFO  com.zj.videoservice.mapper.OutdoorVideoMapperTest - Started OutdoorVideoMapperTest in 11.417 seconds (JVM running for 12.791)
+2021-01-16 11:04:29.090 [SpringContextShutdownHook] INFO  o.s.scheduling.concurrent.ThreadPoolTaskExecutor - Shutting down ExecutorService 'applicationTaskExecutor'
+2021-01-16 11:04:29.100 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown initiated...
+2021-01-16 11:04:29.119 [SpringContextShutdownHook] INFO  com.zaxxer.hikari.HikariDataSource - HikariPool-1 - Shutdown completed.

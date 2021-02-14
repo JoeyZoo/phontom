@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="war" build-on-make="true" name="phontom_backend:war">
+    <output-path>$PROJECT_DIR$/out/artifacts/phontom_backend_war</output-path>
+    <root id="archive" name="phontom_backend_war.war">
+      <element id="artifact" artifact-name="phontom_backend:war exploded" />
+    </root>
+  </artifact>
+</component>
