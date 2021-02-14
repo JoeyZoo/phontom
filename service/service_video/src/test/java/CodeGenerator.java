@@ -40,7 +40,7 @@ public class CodeGenerator {
         dsc.setUrl("jdbc:mysql:///outdoor?useUnicode=true&characterEncoding=utf-8&serverTimezone=Asia/Shanghai");
         dsc.setDriverName("com.mysql.cj.jdbc.Driver");
         dsc.setUsername("root");
-        dsc.setPassword("root");
+        dsc.setPassword("xxxx");
         dsc.setDbType(DbType.MYSQL);
         mpg.setDataSource(dsc);
         // 4、包配置
