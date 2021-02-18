@@ -11,7 +11,7 @@ phontom是一个户外运动视频社区，用户可在社区内围观户外达�
 
 phontom是一个前后端分离的微服务项目
 
-前端使用nuxt.js框架搭建，部署在node.js上，采用SSR服务端渲染
+前端使用nuxt.js框架搭建，部署在node.js上，采用SSR服务端渲染---前端代码请看phontom_front_end仓库
 
 nginx作反向代理,请求转发
 
